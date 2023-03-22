@@ -28,15 +28,11 @@ const styles = StyleSheet.create({
 
     tableCell: {
 
-        padding: "15px 10px 10px",
+        padding: "5px 10px 5px",
     
-        fontSize: 9,
+        fontSize: 8,
 
-        whiteSpace: "nowrap",
-
-        lineHeight: "1.7",
-
-        letterSpacing: "1px"
+        whiteSpace: "nowrap"
 
     }
     

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { PDFViewer } from "@react-pdf/renderer";
+import { PDFDownloadLink, StyleSheet } from "@react-pdf/renderer";
 
 import ReactPdf from "./react-pdf";
 
@@ -126,17 +126,41 @@ const data = {
 
 };
 
+const styles = StyleSheet.create({
+
+  btn: {
+
+    margin: "30px",
+
+    padding: "10px 20px",
+
+    backgroundColor: "#3F96FC",
+
+    border: "none",
+
+    borderRadius: "6px",
+
+    color: "white",
+
+    fontSize: 16,
+
+    cursor: "pointer"
+
+  }
+
+})
+
 function App() {
 
   return (
       
     <Fragment>
-      
-      <PDFViewer width="1000" height="600">
-        
-        <ReactPdf data={data} />
-        
-      </PDFViewer>
+
+      <PDFDownloadLink document={<ReactPdf data={data} />} fileName="somename.pdf">
+
+        <button style={styles.btn}>Imprimer</button>
+
+      </PDFDownloadLink>
       
     </Fragment>
     
